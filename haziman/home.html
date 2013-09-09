@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>HTML&CSS:&lt;img&gt; Without Image?</title>
+<meta name="description" content="Can you believe if I say that the picture above does not contain any jpg or gif or any other type of picture at all? Well believe it. Why? Because it doesn't. It is simply an arrangement of 1 pixel html SPAN element beside each other." />
+<link rel="stylesheet" media="screen" href="default.css" />
+<link rel="stylesheet" media="screen" href="responsive.css" />
+<link rel="stylesheet" href="i2h.css" />
+<link rel="stylesheet" href="typography.css" />
+</head>
+
+<body>
+
+  <div id="container">
+    <div id="header">
+      <div id="logo">
+        SIMPLE DESIGN
+      </div>
+      <ul>
+        <li class="animated">ABOUT</li>
+        <li class="animated">PORTFOLIO</li>
+        <li class="animated">CONTACT US</li>
+        <li class="animated search-box">
+          <input type="text" placeholder="Search" />
+          <span class="font-awesome">&#xf002;</span>
+        </li>
+      </ul>
+    </div>
+    <div id="main-content">
+      <h1>
+        <span class="category">HTML&CSS</span>
+        &lt;IMG /&gt; WITHOUT IMAGE?</h1>
+      <br /><i>by Haziman Hashim </i><i style="float:right">Aug 21st, 2013</i>
+      <p style="clear:both">&nbsp;</p>
+      <iframe class="i2h-container" 
+        width="100" height="100" 
+        src="resources/test2.jpeg.html" 
+        scrolling="no"
+      ></iframe>
+      <p style="clear:both">&nbsp;</p>
+      <p>
+      Can you believe if I say that the picture above does not contain any jpg or gif or any other type of picture at all? Well believe it. Why? Because it doesn't. It is simply an arrangement of 1 pixel html SPAN element beside each other. While it is true that doing this might cause the page to consume more browser's processing resource. However, i think it is already a good start towards breaking the wall of implementing image element with no image resource. This idea came out when i was working on JOMWEB's second challenge - <i><a href="http://jomweb.my/cabaran-css.html">Cabaran CSS Layout</a></i> where it requires all participation to not to use any image and javascript resources in a web layout. Pretty tough huh? But I have done this kind of thing since years ago, because i did not use any What You See Is What You Get (WYSIWYG) editors in that period like Adobe's &reg; Dreamweaver&trade; or so.
+      </p>
+      <h3><u>The Idea</u></h3>
+      <p> 
+      As we all know, images are composed by arrangement of pixels. Each of these pixels holds their own color to form the image we saw. Applying the same concept into html, those pixel can be translated into html markup, then be styled so that they float next to each other, for each row. And then, displaying the resulting html within an IFRAME element (I would prefer doing this using DIV but the challenge's rule prohibits doing so).
+      </p>
+      <h3><u>Translating pixels</u></h3>
+      <p>
+      To generate the html markup for the image, i have wrote a <a href="tools/imagetohtml.rb">ruby script</a> which requires the rmagick gem (ImageMagick API for ruby language). So, assuming you have ruby and rubygems installed, you may use the script after executing the following command in the terminal:<br />
+      <code class="quote">
+        gem install rmagick
+      </code><br />
+      After installing the gem. You can then use the following command to generate the image's HTML markup<br />
+      <code class="quote">
+        ./imagetohtml.rb &lt;YourImageFileGoesHere.jpg&gt;
+      </code><br />
+      If everything goes all right, a new file with the same name of the original file, with extension of ".html" will be created in the same directory. That file is the one that we will be using (still did not believe that it does not have any image file? go load it into any text editor).
+      </p>
+      <h3><u>Using the *.jpg.html file in our HTML</u></h3>
+      <p>
+      In order to be able to display the so-called "image" file, we will need to use the IFRAME element. Be advised that IFRAME element does not resize itself to fit the image size. Thus, we will need to define this as attribute of the IFRAME element like the following:<br />
+      <code>
+      &lt;iframe class="i2h-container" width="image width" height="image height" scrolling="no"&gt;&lt;/iframe&gt;
+      </code><br />
+      And the resulting image would be similar to the first image in this article, depending on the width and height of the original image, and what image itself (of course).
+      </p>
+      <!--<iframe class="i2h-container zoom animated" 
+        width="239" height="241" 
+        src="resources/pixels-zoom.png.html" 
+        scrolling="no"
+      ></iframe>-->
+      <p>
+      Did anyone curious about the "i2h-container" class? The definition is like the following:<br/>
+      <code>
+      .i2h-container {<br />
+      <br />
+      border: none;<br />
+      overflow: hidden;<br />
+      margin:0;<br />
+      padding:0;<br />
+      display:inline-block;<br />
+      border-radius: 5px;<br />
+      <br />
+      }
+      </code>
+      <br />
+      </p>
+      <h3><u>Known Issues</u></h3>
+      <p>
+      The only concerning issues is that the generator generates larger file than the original file. (due to repeating html tags - you know, html tags are so long). Currently, I'm still trying to piece together on how to solve this.
+      </p>
+    </div>
+    <div id="footer">
+          
+      <span class="font-awesome footer-icon">&#xf082;</span>Like on Facebook &bullet;
+      <span class="font-awesome footer-icon">&#xf081;</span>Follow on Twitter &bullet;
+      <span class="font-awesome footer-icon">&#xf0d4;</span>Google<superscript>+</superscript>
+    </div>
+  </div>
+  
+</body>
+</html>

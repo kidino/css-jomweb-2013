@@ -1,0 +1,357 @@
+/*
+Project's name: Resumay
+Description: HTML/CSS template for online resume
+Version: 1.0
+Author: @mohdhuzairy
+Last date modified: 31 August 2013
+*/
+
+/*
+------------------------------------
+Table of Contents:
+------------------------------------
+=1. Reset Styles
+=2. MentariCSS Core Styles
+=3. User's Styles
+=4. Media Queries Styles
+------------------------------------
+*/
+
+/*
+=1. Reset Styles (http://meyerweb.com/eric/tools/css/reset/)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+body
+{
+	line-height:1;
+}
+
+blockquote, q
+{
+	quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after
+{
+	content:'';
+	content:none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+hr
+{
+	display:none;
+}
+
+
+
+/* =2. MentariCSS Core Styles */
+
+/* Table */
+table									{ border:1px solid #ccc; border-left:none; border-top:none; position:relative; top:-3px; margin:18px 0;padding-bottom:0; border-collapse: separate; border-spacing: 0; width:100%; }
+th, td									{ border-top:1px solid #ccc; line-height:18px; padding:9px 18px 8px 10px; position: relative; }
+th										{ background:#666; color:#fff; }
+td,th									{ border-left:1px solid #ccc; text-align: left; font-weight: normal;}
+th:last-child, td:last-child			{ padding-right:0; }
+tr:nth-child(even) td					{ padding:10px; background:#f6f6f6; }
+tr:nth-child(odd) td					{ padding:10px; }
+caption									{ top:8px; margin-bottom:18px; text-align: left; font-weight: normal; }
+/* End Table */
+
+/* Typography */
+h1, h2, h3, h4, h5, h6					{ position:relative; }
+p, blockquote							{ line-height:150%; margin:10px 0 15px 0; }
+cite									{ font-style:normal; display:block; margin:10px 0;}
+code									{ font-family:courier,monospace; background:#fffcdc; border-bottom:1px solid #ccc; line-height:150%; }
+acronym, abbr							{ cursor:help; border-bottom:1px dotted #ccc; }
+sup										{ vertical-align:text-top; }
+sub										{ vertical-align:text-bottom; }
+sup, sub								{ line-height:0; }
+/* End Typography */
+
+/* Positioning */
+.clear                                  { clear:both; }
+.left									{ float:left; }
+.right									{ float:right; }
+.left, .right							{ display:inline-block } /*remove extra white space*/
+.center									{ float:none; margin:0 auto;}
+.pabs									{ position:absolute; }
+.prel									{ position:relative; }
+.pabs, .prel							{ z-index:1; } /* Position ABSolute, Position RELative */
+.imgrep									{ display:block; text-indent:-9999px; }
+/* End Positioning */
+
+
+
+/*
+=3. User's Styles
+*/
+/* Smiley bulletproof by Paul Irish - http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/ */
+@font-face
+{
+    font-family: opensans_regular;
+    src: local('☺'), url('fonts/OpenSans-Regular.ttf') format("truetype");
+}
+
+@font-face
+{
+    font-family: opensans_italic;
+    src: local('☺'), url('fonts/OpenSans-Italic.ttf') format("truetype");
+}
+
+@font-face
+{
+    font-family: opensans_semibold;
+    src: local('☺'), url('fonts/OpenSans-Semibold.ttf') format("truetype");
+}
+
+@font-face
+{
+    font-family: opensans_semibold_italic;
+    src: local('☺'), url('fonts/OpenSans-SemiboldItalic.ttf') format("truetype");
+}
+
+body
+{
+	font:95%/150% opensans_regular, arial;
+	color:#333;
+	background:#fff;
+	border-top:3px solid #333;
+}
+
+a
+{
+	text-decoration:none;
+	color:#0066cc;
+	transition: color 0.3s ease;
+}
+
+a:hover
+{
+	color:#333;
+}
+
+blockquote
+{
+	font-style:italic;
+	color:#999;
+	line-height:180%;
+	padding-left:20px;
+	border-left:1px solid #e5e5e5;
+}
+
+p
+{
+	padding:0;
+	margin-bottom:10px;
+	line-height:160%;
+	color:#444;
+}
+
+#wrapper
+{
+	width:840px;
+	margin:0 auto;
+	margin-top:50px;
+	margin-bottom:30px;
+}
+
+.masthead
+{
+	text-align:right;
+	width:300px;
+	margin:0 20px 0 -80px;
+}
+
+.masthead h1
+{
+	font-size:1.4em;
+	font-family:opensans_semibold;
+	text-transform:uppercase;
+	margin-top:15px;
+}
+
+.masthead h1 a
+{
+	color:#333;
+}
+
+.masthead p
+{
+	color:#999;
+	margin-top:5px;
+	font-size:0.9em;
+}
+
+/* Content */
+#content
+{
+	padding:20px;
+}
+
+.blocks
+{
+	margin:20px 0 40px 0;
+}
+
+.blocks ul
+{
+	list-style:none;
+	padding-top:8px;
+}
+
+.blocks ul li
+{
+	line-height:180%;
+	margin-bottom:5px;
+}
+
+#work ul
+{
+	margin-bottom:20px;
+}
+
+.blocks ul ul
+{
+	padding-top:3px;
+}
+
+.blocks ul ul li
+{
+	margin-bottom:0;
+	line-height:180%;
+}
+
+.blocks small /* Change the bg colour of the skill's score */
+{
+	background:#ffffcc;
+	padding:3px 8px;
+	margin-left:5px;
+}
+
+.blocks h2
+{
+	font-size:0.9em;
+	font-family:opensans_semibold;
+	text-transform:uppercase;
+	width:200px;
+	text-align:right;
+	line-height: 175%;
+	margin:10px 20px 0 0;
+	color:#444;
+}
+
+.blocks-content, .desc
+{
+	width:500px;
+	border-left:1px solid #eee;
+	padding:0 0 0 17px;
+}
+
+.work
+{
+	padding-bottom:0;
+}
+
+.desc
+{
+	padding-top:31px;
+}
+
+.academic p
+{
+	font-size:0.85em;
+}
+
+.position
+{
+	font-family:opensans_semibold;
+	font-weight:bold;
+	color:#444;
+	font-size:0.85em;
+}
+
+.year
+{
+	font-family:opensans_italic;
+	color:#999;
+}
+
+
+/*
+=4. Media Queries Styles v0.9 from Andy Clarke
+Credits: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Put your own styles here */
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Put your own styles here */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Put your own styles here */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Put your own styles here */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Put your own styles here */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Put your own styles here */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Put your own styles here */
+}
+
+/* iPhone 4 and high pixel ratio devices ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Put your own styles here */
+}

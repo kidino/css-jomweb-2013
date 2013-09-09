@@ -1,0 +1,439 @@
+/*
+Project's name: Extreme Georgia Mk. II
+Description: A successor to Extreme Georgia
+Version: 1.0
+Author: @mohdhuzairy
+Last date modified: 28 August 2013
+*/
+
+/*
+------------------------------------
+Table of Contents:
+------------------------------------
+=1. Reset Styles
+=2. MentariCSS Core Styles
+=3. User's Styles
+=4. Media Queries Styles
+------------------------------------
+*/
+
+/*
+=1. Reset Styles (http://meyerweb.com/eric/tools/css/reset/)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+body
+{
+	line-height:1;
+}
+
+blockquote, q
+{
+	quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after
+{
+	content:'';
+	content:none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+hr
+{
+	display:none;
+}
+
+
+
+/* =2. MentariCSS Core Styles */
+
+/* Table */
+table									{ border:1px solid #ccc; border-left:none; border-top:none; position:relative; top:-3px; margin:18px 0;padding-bottom:0; border-collapse: separate; border-spacing: 0; width:100%; }
+th, td									{ border-top:1px solid #ccc; line-height:18px; padding:9px 18px 8px 10px; position: relative; }
+th										{ background:#666; color:#fff; }
+td,th									{ border-left:1px solid #ccc; text-align: left; font-weight: normal;}
+th:last-child, td:last-child			{ padding-right:0; }
+tr:nth-child(even) td					{ padding:10px; background:#f6f6f6; }
+tr:nth-child(odd) td					{ padding:10px; }
+caption									{ top:8px; margin-bottom:18px; text-align: left; font-weight: normal; }
+/* End Table */
+
+/* Typography */
+h1, h2, h3, h4, h5, h6					{ position:relative; }
+p, blockquote							{ line-height:150%; margin:10px 0 15px 0; }
+cite									{ font-style:normal; display:block; margin:10px 0;}
+code									{ font-family:courier,monospace; background:#fffcdc; border-bottom:1px solid #ccc; line-height:150%; }
+acronym, abbr							{ cursor:help; border-bottom:1px dotted #999; }
+sup										{ vertical-align:text-top; }
+sub										{ vertical-align:text-bottom; }
+sup, sub								{ line-height:0; }
+/* End Typography */
+
+/* Positioning */
+.clear                                  { clear:both; }
+.left									{ float:left; }
+.right									{ float:right; }
+.left, .right							{ display:inline-block } /*remove extra white space*/
+.center									{ float:none; margin:0 auto;}
+.pabs									{ position:absolute; }
+.prel									{ position:relative; }
+.pabs, .prel							{ z-index:1; } /* Position ABSolute, Position RELative */
+.imgrep									{ display:block; text-indent:-9999px; }
+/* End Positioning */
+
+
+
+/*
+=3. User's Styles
+*/
+
+body
+{
+	font:95%/150% georgia, serif;
+	color:#333;
+	padding:30px 0 10px 0;
+	background:#fff;
+}
+
+a
+{
+	text-decoration:none;
+	color:#cc3300;
+	transition: color 0.3s ease;
+}
+
+a:hover
+{
+	color:#333;
+}
+
+blockquote
+{
+	font-style:italic;
+	color:#999;
+	line-height:180%;
+	padding-left:20px;
+	border-left:1px solid #e5e5e5;
+}
+
+#wrapper
+{
+	width:750px;
+	margin:0 auto;
+}
+
+#header
+{
+	padding:30px 15px 10px 15px;
+	text-align:center;
+	border:8px double #f5f5f5;
+	margin-bottom:15px;
+	color:#999;
+}
+
+#header h1
+{
+	font-size:1.6em;
+	font-weight:normal;
+}
+
+#content
+{
+	width:500px;
+	padding:0 10px;
+}
+
+.post
+{
+	margin-bottom:40px;
+}
+
+.entry-content p
+{
+	line-height:180%;
+	margin-bottom:20px;
+}
+
+.entry-content ul, .widget ul
+{
+	list-style:square;
+	margin:0 0 20px 30px;
+}
+
+.entry-content ol, .widget ul
+{
+	margin:0 0 20px 30px;
+}
+
+.entry-content ul li, .entry-content ol li
+{
+	margin-bottom:5px;
+	line-height:180%;
+}
+
+.entry-content h3
+{
+	font-size:1.3em;
+	font-weight:normal;
+}
+
+.page-heading, #sidebar h3
+{
+	font-size:1em;
+	font-variant:small-caps;
+	color:#666;
+	letter-spacing:2px;
+}
+
+.entry-title
+{
+	font-size:1.5em;
+	font-weight:normal;
+	line-height:140%;
+	margin-bottom:-13px;
+}
+
+.meta
+{
+	font-size:0.9em;
+	color:#999;
+	margin-top:18px;
+}
+
+.meta a
+{
+	color:#444;
+	border-bottom:1px dotted #e5e5e5;
+}
+
+.meta a:hover
+{
+	color:#333;
+	border-bottom:1px dotted #ccc;
+}
+
+.separator
+{
+	width:30px;
+	border-top:1px solid #eee;
+}
+
+/* Pagination */
+#pagination
+{
+	margin-top:40px;
+}
+
+#pagination a, button
+{
+	background: #eee;
+	background: -moz-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f5f5f5), to(#e5e5e5));
+	border: 1px solid #ccc;
+	box-shadow: inset 0 1px 0 #fff;
+	border-radius:2px;
+  	color:#666;
+  	line-height: 1;
+  	text-shadow: 0 -1px 0 #e5e5e5;
+	padding:7px 10px;
+	font-size:0.85em;
+}
+
+#pagination a:hover, button:hover
+{
+	background: #ddd;
+  	background: -moz-linear-gradient(top, #eee 0%, #e5e5e5 100%);
+  	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#eee), to(#e5e5e5));
+	cursor:pointer;
+}
+
+/* Sidebar */
+#sidebar
+{
+	width:200px;
+	margin:10px 10px 0 0;
+}
+
+.widget
+{
+	margin-bottom:35px;
+}
+
+.widget h3
+{
+	font-weight:normal;
+	margin-bottom:10px;
+}
+
+.widget p
+{
+	font-size:0.85em;
+	color:#666;
+	line-height:180%;
+}
+
+.widget ul
+{
+	margin-left:18px;
+}
+
+.widget ul li
+{
+	font-size:0.85em;
+	line-height:170%;
+}
+
+input
+{
+	padding:7px;
+	border:1px solid #ccc;
+	border-radius:2px;
+	margin-right:3px;
+	display:inline;
+	float:left;
+	width:120px;
+}
+
+/* Footer */
+#footer
+{
+	margin:45px 0;
+	padding:0 10px;
+}
+
+#footer p
+{
+	font-size:0.9em;
+	color:#999;
+	text-align:center;
+	margin:0;
+	line-height:180%;
+}
+
+.left-footer
+{
+	width:500px;
+	border-top:1px solid #eee;
+	padding:15px 0;
+}
+
+.right-footer
+{
+	width:200px;
+	border-top:1px solid #eee;
+	padding:15px 0;
+}
+
+/*
+=4. Media Queries Styles v0.9 from Andy Clarke
+Credits: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+*/
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+	#wrapper
+	{
+		width:350px;
+		margin-top:-5px;
+	}
+
+	#content
+	{
+		width:320px;
+	}
+
+	#content img
+	{
+		width:100%;
+	}
+
+	#sidebar
+	{
+		width:330px;
+		border-top:1px solid #eee;
+		padding-top:25px;
+		margin-top:20px;
+		margin-bottom:-30px;
+	}
+
+	.left-footer, .right-footer
+	{
+		width:330px;
+		float:none;
+	}
+
+	.left-footer
+	{
+		margin-bottom:20px;
+	}
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Put your own styles here */
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Put your own styles here */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Put your own styles here */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Put your own styles here */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Put your own styles here */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Put your own styles here */
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Put your own styles here */
+}
+
+/* iPhone 4 and high pixel ratio devices ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Put your own styles here */
+}

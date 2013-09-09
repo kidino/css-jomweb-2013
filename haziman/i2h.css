@@ -1,0 +1,41 @@
+iframe.i2h-container {
+  border: none;
+  overflow: hidden;
+  margin:5px;
+  padding:0;
+  display:inline-block;
+  border-radius: 5px;
+}
+
+iframe.i2h-container:first-of-type{
+  clear:left;
+}
+iframe.i2h-container:last-of-type {
+  clear:right;
+}
+
+.zoom{
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
+  -moz-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+}
+
+.zoom:hover {
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -moz-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+}
+
+.animated {
+  -moz-transition: all 200ms ease-in;
+  -webkit-transition: all 200ms ease-in;
+}
+
+iframe.i2h-container * {
+  user-select:none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select:none;
+}

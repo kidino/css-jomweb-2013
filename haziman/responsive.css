@@ -1,0 +1,127 @@
+@media screen and (max-width: 1920px) {
+  html {
+    margin: 0 80px 5px 80px !important;
+  }
+  .search-box input{
+    display: inline-block !important;
+  }
+  .search-box {
+    width:200px !important;
+  }
+  #header ul {
+    float:right !important;
+  }
+   #header logo {
+    width:auto !important;
+  }
+  #header ul li:hover {
+    border:none !important;
+    border-bottom: solid 4px gray !important;
+    line-height:56px !important;
+  }
+  
+}
+@media screen and (max-width: 770px) {
+  html {
+    margin: 0 0 5px 0 !important;
+  }
+  .search-box input{
+    display: none !important;
+  }
+  .search-box {
+    width:auto !important;
+  }
+  #header ul {
+    float:right !important;
+  }
+   #header logo {
+    width:auto !important;
+  }
+  #header ul li:hover {
+    border:none !important;
+    border-bottom: solid 4px gray !important;
+    line-height:56px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    margin: 0 0 5px 0 !important;
+  }
+  .search-box input{
+    display: none !important;
+  }
+  .search-box {
+    width:auto !important;
+  }
+  #header logo {
+    width:100% !important;
+  }
+  #header ul {
+    float:left !important;
+  }
+  #header ul li:hover {
+    border:none !important;
+    border-bottom: solid 4px gray !important;
+    line-height:56px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    margin: 0 0 5px 0 !important;
+  }
+  .search-box input{
+    display: none !important;
+  }
+  .search-box {
+    width:auto !important;
+  }
+  #header logo {
+    width:100% !important;
+  }
+  #header ul {
+    float:right !important;
+  }
+  #header ul li:hover {
+    border:none !important;
+    border-bottom: solid 4px gray !important;
+    line-height:56px !important;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  html {
+    margin: 0 0 5px 0 !important;
+  }
+  .search-box input{
+    display: none !important;
+  }
+  .search-box {
+    width:auto !important;
+  }
+  #header logo {
+    width:100% !important;
+  }
+  #header ul {
+    float:left !important;
+  }
+  #header ul li:hover {
+    border:none !important;
+    border-top: solid 4px gray !important;
+    line-height:56px !important;
+  }
+  
+  h1 span.category {
+    width: 100% !important;
+    display:inline-block !important;
+    border-radius: 0;
+    margin-left:-10px;
+    padding-right: 15px;
+    text-align: center;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+}
